@@ -14,13 +14,20 @@ function tryAgain(){
 		if(is_numeric($maxValue)){
 			fwrite(STDOUT, 'enter a value to increment by'.PHP_EOL);
 			$incrementValue = trim(fgets(STDIN).PHP_EOL);
-
+			
 			if(is_numeric($incrementValue && $incrementValue != 0)){
 				echo "/\/\+++++\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/".PHP_EOL;
 				echo "/\/\/\/\/\/\/\/\/\/\do math\/\/\/\/\/++\/\/\/".PHP_EOL;
 				echo "/\/\/\/\moar math\/\/\/\/\/\/\/\/\/\/\/\/\/\/".PHP_EOL;
 				echo "/\/\/\/\/\/\/\/\/+++/\/\/\/\/\/\ok done\/\/\/".PHP_EOL;
-			} else {
+			} elseif($incrementValue = " "){
+				$incrementValue = 1;
+				echo "/\/\+++++\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/".PHP_EOL;
+				echo "/\/\/\/\/\/\/\/\/\/\do math\/\/\/\/\/++\/\/\/".PHP_EOL;
+				echo "/\/\/\/\moar math\/\/\/\/\/\/\/\/\/\/\/\/\/\/".PHP_EOL;
+				echo "/\/\/\/\/\/\/\/\/+++/\/\/\/\/\/\ok done\/\/\/".PHP_EOL;
+
+			}else {
 				fwrite(STDOUT, 'you suck at life try again'.PHP_EOL);
 				tryAgain();
 			}

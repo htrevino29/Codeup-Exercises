@@ -16,11 +16,12 @@ function multiply($a, $b)
 {
     return $a * $b;
 }
-	echo return(2,3).PHP_EOL;
+	echo multiply(2,3).PHP_EOL;
 
 function divide($a, $b)
 {
-    // Add code here
+    return $a / $b;
 }
+	echo divide(10,2).PHP_EOL;
 
 // Add code to test your functions here

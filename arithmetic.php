@@ -4,11 +4,13 @@ function add($a, $b)
 {
     return $a + $b;
 }
+	echo add(1, 1).PHP_EOL;
 
 function subtract($a, $b)
 {
-    // Add code here
+    return $a - $b;
 }
+	echo subtract(2,1).PHP_EOL;
 
 function multiply($a, $b)
 {

@@ -14,8 +14,9 @@ function subtract($a, $b)
 
 function multiply($a, $b)
 {
-    // Add code here
+    return $a * $b;
 }
+	echo return(2,3).PHP_EOL;
 
 function divide($a, $b)
 {

@@ -44,23 +44,29 @@ $companies = [
         'Jean-Louis Gassée'
     ]
 ];
+////////////////////////////////////////////////////////////////
+echo"---array as is----".PHP_EOL;
 
-// echo"---array as is----".PHP_EOL;
-// print_r($companies); // prints companies as is
-// echo"---by company name----".PHP_EOL;
-// ksort($companies); // resorts a-z.
-// print_r($companies);
+print_r($companies); // prints companies as is
+////////////////////////////////////////////////////////////////
+echo"---by company name----".PHP_EOL;
+
+ksort($companies); // resorts a-z.
+print_r($companies);
+////////////////////////////////////////////////////////////////
 echo "---print each key in order under companies---".PHP_EOL;
 
+foreach( $companies as $companyName => $people ){
+    sort($people);
+    // print_r($people);
+    // $companies[$companyName] = $people;
+}    
+print_r($companies);
+////////////////////////////////////////////////////////////////
+echo "---companies biggest to smallest with keys---".PHP_EOL;
 
-
-
-
-
-
-// echo "---companies biggest to smallest with keys---".PHP_EOL;
-// arsort($companies);
-// print_r($companies).PHP_EOL;
+arsort($companies);
+print_r($companies).PHP_EOL;
 
 
 

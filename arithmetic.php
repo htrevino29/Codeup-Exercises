@@ -1,8 +1,8 @@
 <?php
 
 // global variables added for exercise.
-// $val1 = 5;
-// $val2 = 10;
+$val1 = 5;
+$val2 = 10;
 function throwError(){
 	return "ERROR: Both arguments must be numbers\n";
 }
@@ -11,7 +11,7 @@ function add($a, $b){
 	 if (is_numeric($a) && is_numeric($b)) {
 		return $a + $b;
 	} else {
-		throwError();
+		throwError("add");
 	}
 }
 	echo add(1, 1).PHP_EOL;
@@ -20,7 +20,7 @@ function subtract($a, $b){
 	 if (is_numeric($a) && is_numeric($b)) {
 		return $a - $b;
 	} else {
-		throwError();
+		throwError("subtract");
 	}
 }
 	echo subtract(2,1).PHP_EOL;
@@ -29,7 +29,7 @@ function multiply($a, $b){
  if (is_numeric($a) && is_numeric($b)) {
 		return $a * $b;
 	} else {
-		throwError();
+		throwError("multiply");
 	}
 }
 	echo multiply(2,3).PHP_EOL;
@@ -38,7 +38,7 @@ function divide($a, $b){
  if (is_numeric($a) && is_numeric($b) && $a != 0  && $b != 0) {
 		return $a / $b;
 	} else {
-		throwError();
+		throwError("divide");
 	}
 }
 	echo divide(10,9).PHP_EOL;
@@ -50,14 +50,15 @@ function modulus($a, $b){
  if (is_numeric($a) && is_numeric($b)) {
 		return $a % $b;
 	} else {
-		throwError();
+		throwError("modulus");
+
 	}
 }
 	echo modulus(9,3).PHP_EOL;
 
 echo "----------------------- global stuff ----------------------".PHP_EOL;
 
-// echo add($val1,$val2).PHP_EOL;
-// echo subtract($val1,$val2).PHP_EOL;
-// echo multiply($val1,$val2).PHP_EOL;
-// echo divide($val1,$val2).PHP_EOL;
+echo add($val1,$val2).PHP_EOL;
+echo subtract($val1,$val2).PHP_EOL;
+echo multiply($val1,$val2).PHP_EOL;
+echo divide($val1,$val2).PHP_EOL;

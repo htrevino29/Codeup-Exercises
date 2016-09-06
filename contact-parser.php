@@ -2,10 +2,10 @@
 
 function parseContacts($filename)
 {
-    $contacts = array();
+	$contacts = array();
 
-    // todo - read file and parse contacts
-    
+	// todo - read file and parse contacts
+	
 	$handle = fopen($filename, 'r');
 	$contents = fread($handle, filesize($filename));
 	$people = explode("\n", $contents);
@@ -17,14 +17,41 @@ function parseContacts($filename)
 		$nameArray['Name'] = $info[0];
 		$nameArray['Phone'] = $info[1];
 		array_push($contacts , $nameArray);
+		// $contacts[] = $nameArray <----short hand for array_push.
+		
 	}
 	
 	fclose($handle);
-    return $contacts;
+	return $contacts;
 }
 
 $filename = 'contacts.txt';
 var_dump(parseContacts($filename));
+
+// function formatPhoneNumber ($numberString) 
+// {
+
+
+// }
+
+
+
+
+// $data = "2101234567";
+// echo "(".substr($data, 0, 3).") ".substr($data, 3, 3)."-".substr($data,6);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

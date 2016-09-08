@@ -1,5 +1,24 @@
 <?php
 
+function formatPhoneNumber ($number) 
+{
+	 $arrayOfNumbers = str_split($number);
+    $string = $arrayOfNumbers[0]
+            . $arrayOfNumbers[1]
+            . $arrayOfNumbers[2]
+            . "-"
+            . $arrayOfNumbers[3]
+            . $arrayOfNumbers[4]
+            . $arrayOfNumbers[5]
+            . "-"
+            . $arrayOfNumbers[6]
+            . $arrayOfNumbers[7]
+            . $arrayOfNumbers[8]
+            . $arrayOfNumbers[9];
+
+    return $string;
+}
+
 function parseContacts($filename)
 {
 	$contacts = array();
@@ -28,11 +47,6 @@ function parseContacts($filename)
 $filename = 'contacts.txt';
 var_dump(parseContacts($filename));
 
-// function formatPhoneNumber ($numberString) 
-// {
-
-
-// }
 
 
 

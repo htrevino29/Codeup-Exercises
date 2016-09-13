@@ -1,6 +1,6 @@
 <?php
 
-class log
+class Log
 {
 	public $filename;
 
@@ -13,12 +13,35 @@ class log
 	}
 	public function logInfo($message)
 	{
-		logMessage('INFO:', $message);
+		$this->logMessage('INFO:', $message);
 	}
 	public function logError($message)
 	{
-		logMessage('ERROR:', $message);
+		$this->logMessage('ERROR:', $message);
 	}
 
 }
+
+// -******* fers example ********
+// class Log
+// {
+// 	public $filename;
+// 	public $datetime;
+// 	public $handle;
+
+// 	function logMessage($logLevel, $message)
+// 	{
+// 		$sring = "{$this->datetime} $logLevel $message".PHP_EOL;
+// 		fwrite($this->handle, $string);
+// 	}
+// 	function info()
+// 	{
+// 		$this->logMessage("INFO", "This is the first info message.");
+// 	}
+// 	function error()
+// 	{
+// 		$this->logMessage("ERROR", "This is the second info message.");
+// 	}
+
+// }
 	

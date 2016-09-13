@@ -1,12 +1,12 @@
 <?php  
 require_once 'Log.php';
-$logLevel='info';
-$message ='user logged in';
 
 
-$test = new log();
+
+$test = new Log();
 $test->filename='log-'.date('Y-m-d').'.log';
-$test->logMessage($logLevel, $message);
+$test->logInfo('this is a message');
+$test->logError('this is a message');
 
 
 //$message->logError(" username or password is incorrect");
